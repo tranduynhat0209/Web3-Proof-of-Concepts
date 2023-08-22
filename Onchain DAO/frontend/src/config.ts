@@ -1,3 +1,5 @@
+"use client";
+
 import { createWalletClient, custom } from "viem";
 import { configureChains } from "wagmi";
 import { bscTestnet } from "wagmi/chains";

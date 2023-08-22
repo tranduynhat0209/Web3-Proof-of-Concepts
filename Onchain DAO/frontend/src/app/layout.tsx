@@ -1,3 +1,5 @@
+"use client";
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -20,10 +22,10 @@ const wagmiConfig = createConfig({
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Onchain DAO",
-  description: "NFT-powered DAO",
-};
+// export const metadata: Metadata = {
+//   title: "Onchain DAO",
+//   description: "NFT-powered DAO",
+// };
 
 export default function RootLayout({
   children,

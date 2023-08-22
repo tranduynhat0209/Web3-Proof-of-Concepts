@@ -7,7 +7,7 @@ async function sleep(ms: number) {
 async function main() {
   // Deploy the Token Contract
   const tokenContract = await hre.ethers.deployContract("Token", {
-    gasLimit: 30000000,
+    gasLimit: 10000000,
   });
   await tokenContract.waitForDeployment();
   console.log("Token deployed to:", tokenContract.target);
@@ -16,7 +16,7 @@ async function main() {
   const exchangeContract = await hre.ethers.deployContract(
     "Exchange",
     [tokenContract.target],
-    { gasLimit: 30000000 }
+    { gasLimit: 10000000 }
   );
   await exchangeContract.waitForDeployment();
   console.log("Exchange deployed to:", exchangeContract.target);
